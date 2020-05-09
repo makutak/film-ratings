@@ -1,5 +1,5 @@
 (ns film-ratings.handler.index-test
-  (:require [film-ratings.handler.index :as sut]
+  (:require [film-ratings.handler.index]
             [clojure.test :refer [deftest testing is]]
             [ring.mock.request :as mock]
             [integrant.core :as ig]))
@@ -10,4 +10,6 @@
           response (handler (mock/request :get "/"))]
       (is (= :ataraxy.response/ok (first response)))
       (is (= "href=\"/add-film\""
-             (re-find #"href=\"/add-film\"" (second response)))))))
+             (re-find #"href=\"/add-film\"" (second response))))
+      (is (= "href=\"/list-films\""
+             (re-find #"href=\"/list-films\"" (second response)))))))
