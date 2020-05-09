@@ -10,4 +10,4 @@
       [:a.btn.btn-primary {:href "/add-film"} "Add a Film"]]]
     [:row
      [:p
-      [:a.btn.btn-primary {:href "list-films"} "List Films"]]]]))
+      [:a.btn.btn-primary {:href "/list-films"} "List Films"]]]]))
