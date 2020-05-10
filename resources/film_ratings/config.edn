@@ -7,6 +7,14 @@
 
   :film-ratings.handler/index
   {}
+
+  :duct.migrator/ragtime
+  {:migrations [#ig/ref :film-ratings.migrations/create-film]}
+
+  [:duct.migrator.ragtime/sql :film-ratings.migrations/create-film]
+  {:up ["CREATE TABLE film (id INTEGER PRIMARY KEY, name TEXT UNIQUE, description TEXT, rating INTEGER)"]
+   :down ["DROP TABLE film"]}
+
   :film-ratings.handler/example
   {:db #ig/ref :duct.database/sql}}
 
