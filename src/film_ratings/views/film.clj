@@ -1,7 +1,7 @@
 (ns film-ratings.views.film
   (:require [film-ratings.views.template :refer [page labeled-radio]]
             [hiccup.form :refer [form-to label text-field text-area submit-button]]
-            [ring.util.anti-foregery :refer [anti-forgery-field]]))
+            [ring.util.anti-forgery :refer [anti-forgery-field]]))
 
 (defn create-film-view
   []
