@@ -7,7 +7,7 @@
             "/add-film"
             {:get [:film-ratings.handler.film/show-create]
              [:post {film-form :form-params}] [:film-ratings.handler.film/create film-form]}
-            [:get "/list-films" [:film-ratings.handler.film/list]]}}
+            [:get "/list-films"] [:film-ratings.handler.film/list]}}
 
   :film-ratings.handler/index {}
   :film-ratings.handler.film/show-create {}
